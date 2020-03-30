@@ -1,0 +1,6 @@
+*.bc
+*.ll
+llfi/
+obj/
+llfi.*.txt
+llfi.*.dot

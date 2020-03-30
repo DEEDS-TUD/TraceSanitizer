@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+               "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><title>Discuss web gateway</title></head>
+<meta name="keywords"    content="Discuss Web Gateway">
+<meta name="description" content="Discuss is a networked electronic
+    conferencing system, similar to the bulletin board programs found
+    on many computer systems.">
+<body>
+
+<h1>Welcome to the discuss web gateway</h1>
+<table border=0 cellspacing=0 cellpadding=1>
+<tr align=center valign=center>
+<td width=44>
+<A HREF="/"><IMG SRC="images/i-d.gif" ALT="" WIDTH=40 HEIGHT=40></A>
+</td>
+<td width=44>
+<A HREF="help.html"><IMG SRC="images/i-help.gif" ALT="" WIDTH=40 HEIGHT=40></A>
+</td>
+</tr>
+<tr align=center valign=center>
+<td><a href="/">root</a></td>
+<td><a href="help.html">help</a></td>
+</tr>
+</table>
+
+<p> Discuss is a networked electronic conferencing system, similar to the
+    bulletin board programs found on many computer systems. 
+
+<p> Please enter the hostname and the meeting name of the meeting you
+    wish to access. A private meeting can be accessed if it has been
+    <a href="help.html#SSL">set up for access</a> via this gateway, by
+    using the SSL mode with certificates.
+
+<p> Additional help is available on
+    <a href="http://web.mit.edu/is/help/cert/">Web Certificates at MIT</a>
+    and <a href="http://web.mit.edu/olh//Discuss/Discuss.html">Discuss on
+    Athena</a>. 
+
+<p>
+<form method=post action="/cgi-bin/redirect.cgi">
+<table border=0>
+<tr><td><b>Hostname:</b></td>
+    <td><input size=20 name=hostname></td></tr>
+<tr><td><b>Meeting name:</b></td>
+    <td><input size=20 name=meeting></td></tr>
+<tr><td><b>Access mode:</b></td>
+    <td><input type=radio name=mode value=plain checked> Non-SSL (public)
+        <input type=radio name=mode value=secure> SSL (private)</td></tr>
+</table>
+<input type=submit value=Proceed>
+</form>
+</body></html>

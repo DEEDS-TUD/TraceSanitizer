@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /cgi-bin/disweb.cgi/bassas.mit.edu/underlib/ 
+Disallow: /cgi-bin/disweb.cgi/dragons-lair.mit.edu/
+Disallow: /cgi-bin/disweb.cgi/dragons-lair/
+Disallow: /cgi-bin/disweb.cgi/lair.mit.edu/
+Disallow: /cgi-bin/disweb.cgi/lair/
+Disallow: /cgi-bin/disweb.cgi/weyr.mit.edu/
+Disallow: /cgi-bin/disweb.cgi/weyr/
+# Request for bassas.mit.edu/underlib came from efc@mit.edu
+# Request for dragons-lair/lair/weyr came from tlyu@mit.edu, 22 January 2000

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ${PARSECDIR}/pkgs/apps/blackscholes/parsec/gcc-pthreads.bldconf
+
+export LIBS="-lm -lpthread"

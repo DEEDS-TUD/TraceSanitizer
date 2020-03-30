@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source ${PARSECDIR}/pkgs/apps/blackscholes/parsec/gcc-serial.bldconf
+
+export LIBS="-lm"
+

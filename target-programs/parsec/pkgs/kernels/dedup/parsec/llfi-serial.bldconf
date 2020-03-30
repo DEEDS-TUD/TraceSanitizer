@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source ${PARSECDIR}/pkgs/kernels/dedup/parsec/gcc-serial.bldconf
+
+build_env="version=serial CFLAGS=\"-I${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/include -I${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/include ${CFLAGS} -DOPENSSL_NO_ASM\" LDFLAGS=\"-L${PARSECDIR}/pkgs/libs/ssl/inst/${PARSECPLAT}/lib -L${PARSECDIR}/pkgs/libs/zlib/inst/${PARSECPLAT}/lib ${LDFLAGS}\""
+

@@ -1,0 +1,37 @@
+## PARSEC Overview
+
+We had a look at the following benchmarks. We got some of them working.
+
+### Kernels
+in `pkgs/kernels`
+
+#### Working
+- **streamcluster**: fully working, C++
+
+#### Not Working
+- **canneal**: clang works, LLFI-instrument throws exception...
+
+      terminate called after throwing an instance of 'std::logic_error'
+      what():  basic_string::_S_construct null not valid
+     
+      originating in:
+      llfi-passes.so  0x00007fc585ae9fe4 llfi::demangleFuncName(std::string) + 180
+
+- **dedup**: not working due to ssl fips compile issue
+
+### Apps
+in `pkgs/apps`
+
+#### Working
+- **blackscholes**: fully working, C
+- **ferret**: fully working, C, instr takes longer
+- **fluidanimate**: fully working, C++
+- **swaptions**: fully working, C++
+- **x264**: fully working, C, instr takes extremely long
+
+#### Not Working
+- **bodytrack**: clang seems to work, but we have still unresolved compile issues for clang+pthreads, serial instr crashes with same exception as canneal
+- **facesim**: clang cannot compile due to C++ template issue: template types are instantiated before the template is complete, which clang does not like (but gcc does)
+- **freqmine**: only support OpenMP, no pthreads
+- **raytrace**: not tried yet
+- **vips**: not tried yet

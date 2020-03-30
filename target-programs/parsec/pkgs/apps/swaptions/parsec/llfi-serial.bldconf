@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source ${PARSECDIR}/pkgs/apps/swaptions/parsec/gcc-pthreads.bldconf
+
+build_env="version=serial"
+

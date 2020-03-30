@@ -1,0 +1,47 @@
+defaultTimeout: 5 # Adjust based on the time it takes to run a golden run of the benchmark.
+compileOption:
+    instSelMethod:
+      - insttype:
+          include: 
+            - all
+          exclude:
+            - ret
+
+    regSelMethod: regloc
+    regloc: dstreg
+
+    includeInjectionTrace: 
+        - forward
+        - backward
+
+    tracingPropagation: True # trace dynamic instruction values.
+
+    tracingPropagationOption:
+        maxTrace: 250 # max number of instructions to trace during fault injection run
+        debugTrace: True/False
+        generateCDFG: True
+
+runOption:
+    - run:
+        numOfRuns: 1000
+        fi_type: bitflip
+
+    - run:
+        numOfRuns: 1000
+        fi_type: BufferOverflow(API)
+
+    - run:
+        numOfRuns: 1000
+        fi_type: BufferOverflowMalloc(Data)
+
+    - run:
+        numOfRuns: 1000
+        fi_type: DataCorruption(Data)
+
+    - run:
+        numOfRuns: 1000
+        fi_type: InvalidPointer(Res)
+
+    - run:
+        numOfRuns: 1000
+        fi_type: RaceCondition(Timing)

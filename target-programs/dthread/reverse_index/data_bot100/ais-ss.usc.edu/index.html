@@ -1,0 +1,195 @@
+<!-- AIS 3/20/2006 -->
+<!-- etrac User Login, Version 1.20060320 -->
+<html>
+<head>
+<title>eTrac - USC Employee Online Services</title>
+<link rel="stylesheet" href="http://ais-sap.usc.edu/portal.css" type="text/css">
+<link rel="stylesheet" href="etrac-common/etracLogin.css" type="text/css">
+<script type="text/javascript" language="JavaScript"> <!--
+
+var page, path, winName, opts;
+
+function getParameters(page) {
+	if (page=="etrac") {
+		path = "https://ais-ss.usc.edu/index-ssl.html";
+		winName = "eTracssl";
+		opts = "toolbar=no,menubar=yes,location=no,status=yes,resizable=yes,scrollbars=yes,personalbar=no";
+	}
+	else if (page=="PIN") {
+		path = "https://ais-ss.usc.edu/PinSetup.html";
+		winName = "eTracPS";
+		opts = "toolbar=no,menubar=yes,location=no,status=yes,resizable=yes,scrollbars=yes,personalbar=no";
+	}
+	else if (page=="PINhelp") { 
+		path = "http://ais-ss.usc.edu/helpdoc/main/setpin/setpin.html";
+		winName = "helpbox";
+		opts = "toolbar=no,menubar=yes,scrollbars=yes,resizable=yes,height=350,width=475";
+	}
+	else if (page=="help") { 
+		path = "http://ais-ss.usc.edu/helpdoc/etrac/etrac.html";
+		winName = "helpbox";
+		opts = "toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,height=350,width=475";
+	}
+	return;
+}
+
+function openWindow(page) { 
+        getParameters(page);
+        window.open(path, winName, opts); 
+} 
+
+// -->
+</script> 
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<!-- start masthead -->
+
+<div id="masthead">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="100%" align="right">
+	<table id="uscBannerLeft" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr bgcolor="#990000"><td id="usc-name" class="uscbannerBorderUSCName" width="100%">
+			<img name="USC" src="etrac-common/usc-name-white-cardinal.gif" border="0" alt="University of Southern California" width="255" height="25" /></td></tr>
+	<tr><td id="usc-ais" bgcolor="#000000" class="uscbannerBorderAIS">
+			<img name="AIS" src="etrac-common/ais-white-black-med.gif" border="0" alt="AIS" width="475" height="25" /></td></tr>
+	</table>
+</td><td width="63">
+	<table id="uscBannerRight" class="uscbannerBorder" height="51" width="63" border="0" cellspacing="0" cellpadding="0">
+		<tr height="51"><td id="usc-logo" width="63">
+			<a href="http://www.usc.edu/">
+			<img name="mono" src="etrac-common/mono-black-white-med.gif" alt="USC" height="50" width="63" border="0" /></a></td></tr>
+	</table>
+</td></tr></table>
+</div>
+
+
+<!-- eTrac Banner  -->
+
+<div id="masthead"> 
+
+<table bgcolor="#990000" id="etracBannerBorder" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr bgcolor="#990000">
+		<td id="etracBannerLeft" width="138"><img name="USC" src="etrac-common/etrac_logo.gif" border="0" alt="eTrac" width="138" height="100" /></td>
+		<td width="99%"><h1 style="color: #ffffff;">USC Employee Online Services</h1></td>
+		<td id="etracBannerRight" width="149"><img name="mono" src="etrac-common/Bovard-r2.gif" alt="USC" height="100" width="149" border="0" /></td>
+	</tr>
+	</table>
+
+</td></tr></table>
+</div>
+
+<div>&nbsp;</div>
+
+
+
+<div>&nbsp;</div>
+
+
+<!-- Login Menu  -->
+
+<div id="content" align="center">
+
+<table border="0" cellpadding="0" cellspacing="0" bordercolor="#990000">
+
+<!--
+<tr><td colspan="2" bgcolor="#ffffff">
+		<h1>eTrac Selection Menu &nbsp; </h1><br /></td></tr>
+-->
+
+<tr><td><p class="eTracMenuIcon">
+		<a href="javascript:openWindow('etrac');"><img src="etrac-common/icon_login.gif" alt="login" height="26" width="34" border="0" /></a>
+		</p></td>
+	<td><p class="eTracLoginMenu"><b><a href="javascript:openWindow('etrac');">Log into eTrac</a></b></p></td></tr>
+
+<tr><td><p class="eTracMenuIcon">
+		<a href="javascript:openWindow('PIN');"><img src="etrac-common/icon_PIN.gif" alt="login" height="26" width="34" border="0" /></a></p></td>
+	<td><p class="eTracLoginMenu"><b><a href="javascript:openWindow('PIN');">Set up a new PIN</a></b><br />
+		<span class="small">(for new PINs &amp; forgotten PINs)</span></p></td></tr>
+<tr><td><p class="eTracMenuIcon"><a href="http://ais-ss.usc.edu/empldoc/etrac/etrac.html" target="helpbox">
+		<img src="etrac-common/icon_info-Q.gif" alt="info" height="26" width="34" border="0" /></a></p></td>
+	<td><p class="eTracLoginMenu"><b><a href="http://ais-ss.usc.edu/empldoc/etrac/etrac.html">Read eTrac information</a></b></p></td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+
+<!-- Login links -->
+
+<div class="divCenter">
+<p><hr color="#990000" class="hr2" /></p>
+</div>
+
+
+<!-- Info content -->
+
+<div class="content">
+<p><b>eTrac</b> is the <b>USC Employee Online Services</b> website where all active USC Faculty, Staff, and student workers can access their employment information.<br />
+Just create a PIN and you log into the system.</p>
+
+<p>If you have <b>forgotten your PIN</b>, simply set up a new one from the PIN Setup link located above. If you need help 
+setting up a PIN, refer to the <a href="javascript:openWindow('PINhelp');">PIN Setup help</a>.</p>
+
+<p>eTrac loads in a popup window. If you do not see the eTrac login page or the PIN setup page, check the following:</p>
+<ul>
+<li>The second browser window might have opened up behind this browser window. See if it's hidden behind this browser window.</li>
+<li>Your browser is blocking popup windows, either by your browser configuration or a third-party popup window blocker. Disable the popup window browser, or 
+re-configure the setting to allow popup windows from this site.</li>
+<!--
+<li>Your browser is not accepting the page redirection. Click on this <a href="javascript:openWindow('etrac');">link</a> to bring up the eTrac login page in a new browser window.</li>
+-->
+</ul>
+
+<p>Your web browser must be Javascript enabled and allow popup windows.<br /> 
+Refer to the following AIS browser help pages for browser information and setup instructions:<br /> &nbsp; 
+&#149; <a href="http://aisweb.usc.edu/aisweb/Universe/FAQ.html">Web Browsers FAQ</a><br /> &nbsp; 
+&#149; <a href="http://aisweb.usc.edu/aisweb/Universe/BrowserWindows.html">Recommended Browsers &amp; Setup for Windows</a><br /> &nbsp; 
+&#149; <a href="http://aisweb.usc.edu/aisweb/Universe/BrowserMac.html">Recommended Browsers &amp; Setup for Macintosh</a></p>
+
+<p>For more information about eTrac, see the <a href="http://ais-ss.usc.edu/empldoc/etrac/etrac.html">eTrac Help Page</a>.</p>
+
+<p>If you need your access reset or have other questions about eTrac, contact your Home Department Coordinator or send email 
+to <a href="mailto:eTrac@fismaster.usc.edu">eTrac@fismaster.usc.edu</a>.
+</p>
+</div>
+
+
+<!--  USE AIS NOTICE BOX 
+<div class="noticeBox" align="center">
+<p>NOTICE: Use of this and all other USC Business Processes is for official USC purposes only. 
+Violators will be prosecuted.</p>
+</div>
+-->
+
+
+&nbsp;
+
+
+<!-- Bottom nav -->
+
+<hr color="#990000" class="hr1" align="center" />
+<div id="siteInfo" align="center" >
+<a href="http://ais-ss.usc.edu/empldoc/etrac/etrac.html">eTrac Info</a> &nbsp; | &nbsp; 
+<a href="http://aisweb.usc.edu/aisweb/Universe/browsers.html">Browser Help</a> &nbsp; | &nbsp; 
+<a href="http://ais-sap.usc.edu/PrivacyPolicy.html">Privacy Policy</a> &nbsp; | &nbsp;
+<a href="http://ais-sap.usc.edu/AcceptableUsePolicy.html">Acceptable Use Policy</a> &nbsp; | &nbsp;
+<a href="mailto:etrac@fismaster.usc.edu" >email support</a>
+</div>
+<hr color="#990000" class="hr1" />
+<p class="textCenter" align="center"><img src="etrac-common/S-1-CW.gif" width="120" height="123"></p>
+
+</div>
+
+
+<!--end content --> 
+
+<div class="notice">
+<p class="textCenter" align="center"><strong>NOTICE:</strong> Use of this and all other USC Business Processes is for official USC purposes only. Violators will be prosecuted.</p>
+</div>
+
+</body>
+</html>

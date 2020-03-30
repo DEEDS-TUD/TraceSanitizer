@@ -1,0 +1,16 @@
+[package]
+name = "trace-postprocessor"
+version = "0.1.0"
+authors = ["Habib Saissi <saissi@cs.tu-darmstadt.de>"]
+
+[dependencies]
+csv = "1"
+petgraph = "0.4.12"
+log = "0.4.2"
+badlog = "1.1.1"
+num = "0.2.0"
+num-integer = "0.1.39"
+rayon = "1.0.2"
+argparse = "*"
+rsmt2 = "0.9.6"
+pbr = "1.0.1"

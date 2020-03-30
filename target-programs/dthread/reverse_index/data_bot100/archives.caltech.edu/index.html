@@ -1,0 +1,256 @@
+<html>
+<head>
+
+<link	rel="stylesheet"
+		href="http://www.archives.caltech.edu/styles.css"
+		type="text/css" 
+>
+
+<script language="JavaScript1.1">
+<!--
+
+function preloadImages() {
+/*
+	preloadImages()
+	Loads images into the browser's cache for later use.
+
+	Usage: preloadImages('image 1 URL', 'image 2 URL', 'image 3 URL', ...);
+*/
+	// Don't bother if there's no document.images
+	if (document.images) {
+    	if (typeof(document.WM) == 'undefined'){
+      		document.WM = new Object();
+    	}
+    	document.WM.loadedImages = new Array();
+		// Loop through all the arguments.
+		var argLength = preloadImages.arguments.length;
+		for(arg=0;arg<argLength;arg++) {
+			// For each arg, create a new image.
+			document.WM.loadedImages[arg] = new Image();
+			// Then set the source of that image to the current argument.
+			document.WM.loadedImages[arg].src = preloadImages.arguments[arg];
+		}
+	}
+}
+
+function handleMouseOver(imageName) {
+	if(document.images){
+		if (navigator.appVersion.charAt(0) >= 3) {
+			document.images[imageName].src="TemplateImages/"+imageName+"_over.gif";
+		}
+	}
+	document.images[imageName].src="TemplateImages/"+imageName+"_over.gif";
+}
+
+function handleMouseOut(imageName) {
+	if(document.images){
+		if (navigator.appVersion.charAt(0) >= 3) {
+			document.images[imageName].src="TemplateImages/"+imageName+".gif";
+		}
+	}
+}
+
+function confirmGeneral(itemDescription, aURL) {  if(confirm(itemDescription+'   ')) { location.href = aURL;} }
+
+// -->
+
+</script>
+
+
+
+
+	<title>The Caltech Institute Archives</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta NAME="Description" CONTENT="The Caltech Institute Archives is a world class archive preserving the papers, documents, artifacts and pictorial materials that tell the school's history, from 1891 to the present. Researchers will also find here a wealth of sources for the history of science and technology worldwide, stretching from the time of Copernicus to today."> 
+<meta NAME="Keywords" CONTENT="archive,photo,image,photonet,history,education,science,caltech,CIT"> 
+</head>
+
+<body onLoad="preloadImages('TemplateImages/home_over.gif', 'TemplateImages/materials_over.gif', 'TemplateImages/services_over.gif', 'TemplateImages/features_over.gif')" 
+		bgcolor="#FFFFFF" 
+		
+				background="TemplateImages/BackgroundBrownRight.gif">
+			
+<table border="0">
+<tr><td width=750>
+<table border="0" align="center" width="95%">
+  <tr> 
+    <td colspan="2">
+    	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr background="TemplateImages/brown_background_color.gif">
+		<td align="left"><a href="index.cfm" onMouseOver="handleMouseOver('home')"  
+		onMouseOut="handleMouseOut('home')"><img name="home" src="TemplateImages/home.gif" 
+		width="275" height="24"  border="0"></a></td>
+		<td background="TemplateImages/brown_background_color.gif" width="100%"></td>
+		<td align="right" ><nobr><a href="materials.cfm" 
+		onMouseOver="handleMouseOver('materials')"  
+		onMouseOut="handleMouseOut('materials')"><img name="materials"  src="TemplateImages/materials.gif" 
+		width="119" height="24"  border="0"></a><a href="services.cfm" 
+		onMouseOver="handleMouseOver('services')" 
+		 onMouseOut="handleMouseOut('services')"><img name="services"  src="TemplateImages/services.gif" 
+		 width="88" height="24"  border="0"></a><a href="features.cfm"  
+		 onMouseOver="handleMouseOver('features')"  
+		 onMouseOut="handleMouseOut('features')"><img name="features" src="TemplateImages/features.gif" 
+		 width="88" height="24"  border="0"></a></nobr></td>
+	 </tr></table>
+    </td>
+  </tr>
+
+
+  <tr> 
+    <td width="17">&nbsp;</td>
+    <td width = "100%"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td valign="top" width="90%"> <br>
+            <img src="TemplateImages/T.gif" width="26" height="29" align=left>he 
+            Institute Archives serves as the collective memory of Caltech by preserving the papers, documents, artifacts and pictorial materials that tell 
+            the school's history, from 1891 to the present. Researchers will also 
+            find here a wealth of sources for the history of science and technology 
+            worldwide, stretching from the time of Copernicus to today.</td>
+          <td >&nbsp;</td>
+          <td valign="top" rowspan="2" width="120"> 
+            <table border="0" cellspacing="12" width="120">
+              <tr> 
+                <td valign="top" height="109" width="120"> 
+                  <div align="center"> 
+                    <table border="0" cellpadding="3">
+                      <tr> 
+                        <td valign="top" align="center" width="120"><a href="materials.cfm"><img src="TemplateImages/Millikan.jpg" width="96" height="101" alt="Archives Materials" border="0"></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td valign="top" height="109"> 
+                  <p><font face="Arial, Helvetica, sans-serif" color="#400000" size="5"><b>Materials</b></font><font face="Arial, Helvetica, sans-serif"><br>
+                    <a href="collections.cfm">Collections</a><br>
+                    <a href="photoNet.cfm">Photos</a><br>
+                    <a href="oral_histories_main_page.cfm">Oral Histories</a><br>
+                    <a href="publications.cfm#Finding_Aids">Finding Aids</a> </font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td valign="top" height="111"> 
+                  <div align="center"> 
+                    <table border="0" width="100%" cellpadding="3">
+                      <tr> 
+                        <td valign="top" align="center"><a href="services.cfm"><img src="TemplateImages/Athenaeum.jpg" width="110" height="99" alt="Archives Services" border="0"></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td valign="top" > 
+                  <p><font face="Arial, Helvetica, sans-serif" color="#400000" size="5"><b>Services</b></font><font face="Arial, Helvetica, sans-serif"><br>
+                    <nobr><a href="services.cfm">Use of Materials</a></nobr><br>
+                    <a href="visiting_us.cfm">Visiting Us</a><br>
+                    <a href="services.cfm#contact_info">Contact Info</a><br>
+                    <a href="staff.cfm">Staff</a></font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td valign="top" > 
+                  <div align="center"> 
+                    <table border="0" width="100%" cellpadding="3">
+                      <tr> 
+                        <td valign="top" align="center"><a href="features.cfm"><img src="TemplateImages/Exhibits.jpg" width="107" height="99" alt="Archives Features" border="0"></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td valign="top" >
+                  <p><font face="Arial, Helvetica, sans-serif" color="#400000" size="5"><b>Features</b></font><font face="Arial, Helvetica, sans-serif"><br>
+                    <a href="exhibits.cfm">Exhibits</a><br>
+                    <a href="publications.cfm">Publications</a><br>
+                    <a href="whats_old.cfm">What's Old</a><br>
+                    <a href="grants-in-aid.cfm">Grants-in-Aid</a></font></p>
+                </td>
+              </tr>
+  				<tr>
+                <td valign="top" > 
+                  <div align="center"> 
+                    <table border="0" width="100%" cellpadding="3" id="table1">
+                      <tr> 
+                        <td valign="top" align="center">
+						<a href="exhibits/earthquake/index.html">
+						<img src="images/agassiz_small.jpg" width="100" height="106" alt="Earthquake exhibit" border="0"></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td valign="top" nowrap >
+                  <font face="Arial, Helvetica, sans-serif" color="#400000" size="5"><b>
+					New Items</b></font><font face="Arial, Helvetica, sans-serif"><br>
+                    <a target="_new" href="exhibits/earthquake/index.html">1906 Earthquake Exhibit</a><br>
+<a href="new_acquisitions.cfm">Acquisitions</a><br>
+<a href="http://oralhistories.library.caltech.edu/" target="_new">Online Oral Histories</a><br>
+                    &nbsp;</font></td>
+              </tr>
+
+              <tr> 
+                <td valign="top" colspan="2" height="124"> 
+			<form  action="search_catalog.cfm" method="POST">
+                    <table border="0" width="100%">
+                      <tr> 
+                        <td  colspan="2"><font face="Arial, Helvetica, sans-serif" size="5"><b><font size="3">Search 
+                          the Archives' Catalog</font></b></font></td>
+                      </tr>
+                      <tr>
+                        <td valign="middle" width="50%"> 
+                          <input type="text" name="search_field" size="20" value="">
+                        </td>
+                        <td valign="middle" ><INPUT TYPE="image" SRC="TemplateImages/SearchButton.gif" HEIGHT="23" WIDTH="68" NAME="-search" border="0"></td>
+                      </tr>
+                      <tr> 
+                        <td  colspan="2">
+					<font face="Arial, Helvetica, sans-serif" size="-1">
+						Basic search finds all items matching any search term sorted by relevance.  Example search: <nobr><b>Merrill Wind Tunnels</b></nobr>
+						<p>
+						Double quotes find text matching the exact characters quoted.  Example: <nobr><b>Einstein "video tape"</b></nobr>
+						<p>
+						"+" and "-" include or exclude individual words.  <b>+Einstein –Millikan</b>, for example, finds all items that contain "Einstein" but not "Millikan". Note: there is a space character between the two terms. <a href="search_help_page.cfm">More search help</a>.
+					</font>
+				</td>
+                      </tr>
+                    </table>
+                  </form>
+                 </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="48%" valign="top"> 
+		
+			<table width="95%" border="0">
+			  <tr> 
+			    <td> 
+				<div align="center"><b><font face="Arial, Helvetica, sans-serif" size="-1">Palomar Telescope<br>Mount Design, 1929</font></b></div>
+			    </td>
+			  </tr>
+			  <tr> 
+			    <td> 
+				<div align="center"><a href="photoNet.cfm"><img src="Images/rotating_pictures/telescope_mount.jpg" width="211" height="214" alt="PhotoNet Image Archive" border=0></a></div>
+			    </td>
+			  </tr>
+			  <tr> 
+			    <td valign="top" align="center"> 
+				<table width="85%" align="center"><tr><td>
+				<i><font >An early design for the mounting of the 200-inch Palomar telescope by Russell W. Porter, January 1929.  This equatorial turret -- also known as the tube mounting -- was later abandoned in favor of the horseshoe mount.<br>
+				  <br>
+				  </font></i>
+				</td></tr></table>
+                </td>
+              </tr>
+            </table>
+		
+		Photo above is from the Caltech Archives' <a href="photoNet.cfm">PhotoNet</a>, an online, searchable database of thousands of images. </td>
+          <td width="1%">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+</td></tr></table>
+</body>
+</html>

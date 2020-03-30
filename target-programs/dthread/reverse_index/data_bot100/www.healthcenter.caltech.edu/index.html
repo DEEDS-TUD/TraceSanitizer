@@ -1,0 +1,460 @@
+<!DOCTYPE html public "-//w3c//dtd html 4.0//en">
+
+<html>
+
+
+
+<head>
+
+<title>Student Health Center</title>
+
+
+
+<style>
+
+<!--
+
+h1 { font-family:Arial; font-size:12pt; color:rgb(0,64,128); }
+
+h2 { font-family:Arial; font-size:12pt; color:rgb(128,128,128); }
+
+p { font-family:Arial; color:rgb(0,0,0); }
+
+p.namo-list { font-family:Arial; font-size:12pt; color:rgb(0,128,192); }
+
+p.namo-sublist { font-family:Arial; font-size:10pt; color:rgb(0,128,192); }
+
+h3
+	{margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Verdana; margin-left:0in; margin-right:0in; margin-top:0in}
+-->
+
+</style>
+
+<meta name="namo-theme" content="Basic">
+
+<link rel="stylesheet" href="css/default.css">
+
+<script language="JavaScript">
+<!--
+function na_open_window(name, url, left, top, width, height, toolbar, menubar, statusbar, scrollbar, resizable)
+{
+  toolbar_str = toolbar ? 'yes' : 'no';
+  menubar_str = menubar ? 'yes' : 'no';
+  statusbar_str = statusbar ? 'yes' : 'no';
+  scrollbar_str = scrollbar ? 'yes' : 'no';
+  resizable_str = resizable ? 'yes' : 'no';
+  window.open(url, name, 'left='+left+',top='+top+',width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+}
+
+function na_change_img_src(name, nsdoc, rpath, preload)
+{ 
+  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+  if (name == '')
+    return;
+  if (img) {
+    img.altsrc = img.src;
+    img.src    = rpath;
+  } 
+}
+
+function na_restore_img_src(name, nsdoc)
+{
+  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+  if (name == '')
+    return;
+  if (img && img.altsrc) {
+    img.src    = img.altsrc;
+    img.altsrc = null;
+  } 
+}
+
+// -->
+</script>
+</head>
+
+
+
+<body bgcolor="white">
+
+<form action="search.asp" method="get" onsubmit="return isSearchTermValid( this );">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="740">
+
+    <tr>
+
+        <td valign=top colspan="2">
+
+           
+           <a href="index.html">
+           <img src="images/logo.jpg" border="0" alt="Caltech Student Health Center" width="719" height="92"></a><br>
+
+        </td>
+
+    </tr>
+
+
+
+ <tr>
+
+        <th valign=bottom align=left width=165>
+
+
+
+&nbsp;<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!-- Begin
+
+Stamp = new Date();
+
+year = Stamp.getYear();
+
+if (year < 2000) year = 1900 + year;
+
+document.write('<font size="2" color="ffffff" face="Arial">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</font><BR>');
+
+
+
+// End -->
+
+</SCRIPT>
+
+           
+
+        </th>
+
+        <th align=right valign=bottom width=575>
+
+           <input type="text" name="searchTerm" size="18" maxlength="35" value=""> <input type="submit" name="submit" value="Search">&nbsp;&nbsp;
+
+        </th>
+
+    </tr>
+
+
+
+
+
+       
+
+</table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="740">
+
+<tr>
+
+        <td width=165 valign=top>
+
+
+
+<div class="menu">Menu<!--NAMO_NAVBAR_START T V   h   s 0 1 2 21 3 4 -->
+<div>
+<img src="nav/nav_1_index_btn_homeh.gif" name="nav_index_TV0" 
+border="0" class="namo-hibutton1" alt="Home" align="texttop">&nbsp;<br>
+<a href="generalinfo.html"  
+onmouseover="na_change_img_src('nav_index_TV1', 'document', 'nav/nav_1_generalinfo_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV1', 'document');"><img src="nav/nav_1_generalinfo_tv.gif" name="nav_index_TV1" 
+border="0" class="namo-button1" alt="General Information" align="texttop"></a>&nbsp;<br>
+<a href="services.html"  
+onmouseover="na_change_img_src('nav_index_TV2', 'document', 'nav/nav_1_services_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV2', 'document');"><img src="nav/nav_1_services_tv.gif" name="nav_index_TV2" 
+border="0" class="namo-button1" alt="Services" align="texttop"></a>&nbsp;<br>
+<a href="insurance.html"  
+onmouseover="na_change_img_src('nav_index_TV3', 'document', 'nav/nav_1_insurance_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV3', 'document');"><img src="nav/nav_1_insurance_tv.gif" name="nav_index_TV3" 
+border="0" class="namo-button1" alt="Student Health Insurance" align="texttop"></a>&nbsp;<br>
+<a href="pharmacy.html"  
+onmouseover="na_change_img_src('nav_index_TV4', 'document', 'nav/nav_1_pharmacy_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV4', 'document');"><img src="nav/nav_1_pharmacy_tv.gif" name="nav_index_TV4" 
+border="0" class="namo-button1" alt="Mail Order Pharmacy" align="texttop"></a>&nbsp;<br>
+<a href="dental_vision.html"  
+onmouseover="na_change_img_src('nav_index_TV5', 'document', 'nav/nav_1_dental_vision_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV5', 'document');"><img src="nav/nav_1_dental_vision_tv.gif" name="nav_index_TV5" 
+border="0" class="namo-button1" alt="Dental and Vision Info." align="texttop"></a>&nbsp;<br>
+<a href="newstudents.html"  
+onmouseover="na_change_img_src('nav_index_TV6', 'document', 'nav/nav_1_newstudents_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV6', 'document');"><img src="nav/nav_1_newstudents_tv.gif" name="nav_index_TV6" 
+border="0" class="namo-button1" alt="For New Students" align="texttop"></a>&nbsp;&nbsp;<br>
+<a href="healtheducation.html"  
+onmouseover="na_change_img_src('nav_index_TV8', 'document', 'nav/nav_1_healtheducation_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV8', 'document');"><img src="nav/nav_1_healtheducation_tv.gif" name="nav_index_TV8" 
+border="0" class="namo-button1" alt="Health Education" align="texttop"></a>&nbsp;<br>
+<a href="http://www.counseling.caltech.edu"  
+onmouseover="na_change_img_src('nav_index_TV9', 'document', 'nav/nav_1_92_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV9', 'document');"><img src="nav/nav_1_92_tv.gif" name="nav_index_TV9" 
+border="0" class="namo-button1" alt="Counseling Center" align="texttop"></a>&nbsp;<br>
+<a href="links.html"  
+onmouseover="na_change_img_src('nav_index_TV10', 'document', 'nav/nav_1_links_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV10', 'document');"><img src="nav/nav_1_links_tv.gif" name="nav_index_TV10" 
+border="0" class="namo-button1" alt="Health Related Links" align="texttop"></a>&nbsp;<br>
+<a href="Photos/announcement.html"  
+onmouseover="na_change_img_src('nav_index_TV11', 'document', 'nav/nav_1_announcement_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_index_TV11', 'document');"><img src="nav/nav_1_announcement_tv.gif" name="nav_index_TV11" 
+border="0" class="namo-button1" alt="Special Announcements" align="texttop"></a>&nbsp;<br>
+<a onmouseover="na_change_img_src('nav_index_TV12', 'document', 'nav/nav_1_24a_tvr.gif', true);" onmouseout="na_restore_img_src('nav_index_TV12', 'document');" href="Health%20Forms4-5-2006.pdf"><img src="nav/nav_1_24a_tv.gif" name="nav_index_TV12" 
+border="0" class="namo-button1" alt="Health Forms" align="texttop"></a><a name="anchor_menu0">&nbsp;</a><br>
+</div>
+<!--NAMO_NAVBAR_END-->                <p>
+	<font color="#FF0000"><u><a href="afterhours.html">
+	<font color="#FF0000">AFTER HOURS MEDICAL CARE</font></a></u></font></p>
+	<p>
+	<br></p>
+
+
+
+
+
+
+
+
+
+                </div>
+</td>
+
+
+
+<TD background="images/leftshade.gif" vAlign=bottom width="7">
+<img src="images/1x1.gif" width="1" height="1"></TD>
+
+
+
+<td width=568 valign=top>
+
+<p><font color="#FF6600"><br>
+</font></p>
+<div class="title"><font color="#FF6600">&nbsp;</font>Student Health Center</div>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="95%">
+
+                    <tr>
+
+                        <td width="222" valign="middle">               
+                        <img src="images/nurse.jpg" border="0" width="220" height="159">
+
+
+
+               
+
+                        </td>
+
+                        <td width="303" valign="top">               
+
+                          <p>The Archibald Young Student Health Center 
+
+                    is a convenient place to go when you need medical and counseling 
+
+                    services. Located on the Caltech campus, the Student Health 
+
+                    Center is staffed by doctors, nurse practitioners and physician 
+
+                    assistants.</p>
+
+                          <p>Visit the Student Health Center whenever you need health 
+
+                care services. You don't need an appointment---just drop in. 
+
+                If you 
+
+                wish to see a specific doctor or nurse practitioner, please 
+
+                call for an appointment.</p>
+
+                      </td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td width="531" valign="top" colspan="2">                
+
+                           
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+		<br>
+
+                <table border="1" cellspacing="0" width="90%" bordercolordark="white" bordercolorlight="black" align="center" cellpadding="4">
+
+                    <tr>
+
+                        <td width="50%" bgcolor="#A7F9A7" valign="top">
+
+						
+
+						 
+
+<P><b><font color="#000099" size="3">FLU INFORMATION</font></b></P>
+<P><a href="Flu%20Cl.pdf">CALTECH FLU CLINIC 
+2005</a></P>
+<P><u><font color="#000099"><b><a href="PREVENTING%20THE%20FLU.pdf">Preventing 
+the Flu</a></b></font></u></P>
+<P><font color="#0066CC"><b><u><a href="pdf/FLU%20SYMPTOMS.pdf">Flu 
+Symptoms and Treatment</a></u></b></font></P>
+<P><u><font color="#000099"><b><a href="announcement/flu.html">How to Survive 
+the Cold and Flu Season</a></b></font></u></P>
+<P><u><font color="#000099"><b><a href="announcement/flu/difference.html">Is it 
+the Cold or the Flu?</a></b></font></u></P>
+
+						
+
+						
+
+<P align="justify"><font color="#000099"><b><font size="3">MENINGITIS 
+VACCINATION&nbsp;&nbsp; </font><font size="2">&nbsp;&nbsp;&nbsp; </font>&nbsp;&nbsp;</b></font></P>
+<P align="justify"><font color="#000099"><b>If you are interested in receiving 
+the meningitis vaccine, please contact the student health center at ext. 6393</b></font></P>
+<P align="justify"><font color="#000099" size="2"><b>AVIAN FLU HEALTH ADVISORY</b></font></P>
+<P align="left"><font color="#000099"><b>For the most current info:
+<a href="http://pandemicflu.gov">http://pandemicflu.gov</a></b></font></P>
+<P align="justify"><font color="#FF0000" size="3"><b><a href="SARS-Info.htm">SARS INFORMATION
+</a> </b></font></P>
+<P align="justify"><font color="#9900FF"><u><b>West Nile Virus Information</b></u></font><br>
+&nbsp;</P>
+<P align="justify">&nbsp;</P>
+
+						
+
+						
+
+                        <p>
+                        &nbsp;</p>
+
+						
+
+						
+
+                          <p><br>
+
+</td>
+
+                        <td width="50%" valign="top" bgcolor="#A7F9A7">
+
+						
+
+						
+
+						<P><u><font color="#000099" size="3"><b>NEW&nbsp; FROM THE 
+						HEALTH CENTER</b></font></u></P>
+
+						
+
+						
+
+						<P><br>
+                        <font color="#000099"><b>
+						<a href="pdf/New%20Sign-In.pdf">Sign-In 
+						Procedure</a></b></font></P>
+						<P><font color="#0066CC"><u><b>
+						<a href="pdf/NewHrs.pdf">Health Center Hours</a></b></u></font></P>
+						<P><font color="#0066CC"><u><b>
+						<a href="pdf/New%20Hlth%20Survey.pdf">Health 
+						Center Survey</a></b></u></font><font color="#000099"><br>
+                        </font>
+                        <br>
+                        <br>
+                        &nbsp;</P>                                                
+
+<P>&nbsp;</P>                        
+
+<P>&nbsp;</P>
+						<P>
+						&nbsp;</P>                        
+
+						
+
+						
+
+<P>
+                        &nbsp;</P>                        </td>
+
+                    </tr>
+
+                </table>
+
+
+
+&nbsp;
+
+                <table align="center" border="0" cellpadding="2" cellspacing="2" width="90%">
+
+                    <tr>
+
+                        <td width="558">
+
+                            <p>
+                            &nbsp;</p>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <p>&nbsp;</p>
+
+        </td>
+
+    </tr>
+
+
+
+</table>
+
+            
+
+</form>
+
+
+
+
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+
+    <tr>
+
+        <td class=footer align="center" valign="top"><!--NAMO_NAVBAR_START T h   h     0 13 15 5 4 6 -->
+<div>
+[Home][<a href="generalinfo.html"  onmouseover="" onmouseout="">General Information</a>][<a href="services.html"  onmouseover="" onmouseout="">Services</a>][<a href="insurance.html"  onmouseover="" onmouseout="">Student Health Insurance</a>][<a href="pharmacy.html"  onmouseover="" onmouseout="">Mail Order Pharmacy</a>][<a href="dental_vision.html"  onmouseover="" onmouseout="">Dental and Vision Info.</a>][<a href="newstudents.html"  onmouseover="" onmouseout="">For New Students</a>][<a href="Graduate Students.html"  onmouseover="" onmouseout="">Graduate Students</a>][<a href="healtheducation.html"  onmouseover="" onmouseout="">Health Education</a>][<a href="http://www.counseling.caltech.edu"  onmouseover="" onmouseout="">Counseling Center</a>][<a href="links.html"  onmouseover="" onmouseout="">Health Related Links</a>][<a href="Photos/announcement.html"  onmouseover="" onmouseout="">Special Announcements</a>][<a href="http://www.healthcenter.caltech.edu/form2.pdf"  onmouseover="" onmouseout="">Health Forms</a>]</div>
+<!--NAMO_NAVBAR_END--></td>
+
+    </tr>
+
+    
+
+     <tr>
+
+        <td class=footer align="center" valign="top">
+
+	
+
+	<br><a href="http://www.caltech.edu">
+    <img src="images/cit_small.gif" border="0" width="65" height="66"></a><br><a href="http://www.caltech.edu">Caltech Home Page</a>
+
+	
+
+	</td>
+
+    </tr>
+
+</table>
+
+<p>&nbsp;</p>
+
+
+
+
+
+</body>
+
+
+
+</html>

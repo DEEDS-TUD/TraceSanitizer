@@ -1,0 +1,34 @@
+#!/bin/bash
+
+source ${PARSECDIR}/config/gcc-serial.bldconf
+
+export WLLVM_OUTPUT_FILE=/tmp/wllvm.log
+export WLLVM_OUTPUT_LEVEL=DEBUG
+
+export LLVM_COMPILER=clang
+export CC=wllvm
+export CXX=wllvm++
+
+export LLFI=ON
+export LLFI_HOME="${LLFI_HOME-$HOME/llfi}"
+export LLFI_INSTRUMENT_EXEC="$LLFI_HOME/bin/instrument"
+export LLFI_RT_DIR="$LLFI_HOME/runtime_lib"
+export LLFI_RT_LIB="-lllfi-rt"
+if [[ ! -x "$LLFI_INSTRUMENT_EXEC" ]]; then
+  echo "ERROR: Cannot find [$LLFI_INSTRUMENT_EXEC]."
+  echo "       Please set LLFI_HOME."
+  exit 1
+fi
+# export LLFI_INSTRUMENT="$LLFI_INSTRUMENT_EXEC --IRonly --profonly"
+export LLFI_INSTRUMENT="$LLFI_INSTRUMENT_EXEC --IRonly"
+export LLFI_LINK_FLAGS="-Wl,-rpath $LLFI_RT_DIR -L $LLFI_RT_DIR $LLFI_RT_LIB"
+
+PORTABILITY_FLAGS="-Wl,--hash-style=both,--as-needed"
+export CFLAGS="-O0 -funroll-loops ${PORTABILITY_FLAGS}"
+export CXXFLAGS="-O0 -funroll-loops -fpermissive -fno-exceptions ${PORTABILITY_FLAGS}"
+
+# Add PARSEC version to compiler flags
+if [ -f "${PARSECDIR}/version" ]; then
+  CFLAGS="${CFLAGS} -DPARSEC_VERSION=\"$(${CAT} ${PARSECDIR}/version)\""
+  CXXFLAGS="${CXXFLAGS} -DPARSEC_VERSION=\"$(${CAT} ${PARSECDIR}/version)\""
+fi

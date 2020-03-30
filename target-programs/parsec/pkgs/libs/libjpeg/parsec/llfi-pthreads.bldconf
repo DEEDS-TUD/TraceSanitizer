@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source ${PARSECDIR}/pkgs/libs/gsl/parsec/gcc-pthreads.bldconf
+
+build_env="CC=clang CFLAGS=\"${CFLAGS} -O2\""
+

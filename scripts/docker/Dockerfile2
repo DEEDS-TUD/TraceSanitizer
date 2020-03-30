@@ -1,0 +1,58 @@
+FROM debian:stretch-slim
+
+# Install build dependencies of llvm.
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates gnupg build-essential python wget unzip \
+        libstdc++-6-dev binutils tar git python3-dev libyaml-dev \
+        sudo python3-pip software-properties-common debconf-utils m4 \
+        ninja-build cmake file time && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install PyYAML
+RUN python3 -m pip install --upgrade pip wheel setuptools && \
+    python3 -m pip install PyYAML wllvm
+
+# Add llfi user with password 'root'
+RUN useradd -ms /bin/bash llfi && \
+    echo "root\nroot" | passwd llfi && \
+    usermod -a -G sudo llfi
+
+RUN cd /home/llfi/ && \
+    wget -q http://llvm.org/releases/3.4/llvm-3.4.src.tar.gz && \
+    tar xaf llvm-3.4.src.tar.gz && \
+    rm llvm-3.4.src.tar.gz && \
+    wget -q http://llvm.org/releases/3.4/clang-3.4.src.tar.gz && \
+    tar xaf clang-3.4.src.tar.gz && \
+    rm clang-3.4.src.tar.gz && \
+    mv clang-3.4 llvm-3.4/tools/clang && \
+    mv llvm-3.4 llvmsrc && \
+    mkdir /home/llfi/llvm && \
+    cd /home/llfi/llvm && \
+    cmake -GNinja \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D CMAKE_BUILD_TYPE=Release \
+      -D LLVM_INCLUDE_TESTS=OFF \
+      -D LLVM_INCLUDE_EXAMPLES=OFF \
+      -D LLVM_INCLUDE_DOCS=OFF \
+      -D LLVM_REQUIRES_RTTI=1 \
+      -D LLVM_TARGETS_TO_BUILD='X86' \
+      ../llvmsrc/ && \
+    ninja install && \
+    find /home/llfi -type f -name '*.o' -delete && \
+    chown -R llfi:llfi /home/llfi
+
+# Switch to llfi user
+USER llfi
+WORKDIR /home/llfi
+
+# build llfi
+CMD cd /home/llfi/llfisrc && \
+    echo 'Building LLFI...' && \
+    env MAKEFLAGS=-j3 ./setup && \
+    cd /home/llfi/llfi && \
+    find . -type f -name '*.o' -delete && \
+    cd /home/llfi && \
+    echo 'Setup is complete! You are good to go!' && \
+    exec bash
+
